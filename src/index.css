@@ -1,0 +1,29 @@
+
+@import "tailwindcss/preflight";
+@tailwind utilities;
+@font-face {
+
+    font-family: DM-Sans;
+    src: url(../src/assets/fonts/DMSans-Regular.ttf);
+}
+@font-face {
+    font-family: DM-Sans-Bold;
+    src: url(../src/assets/fonts/DMSans-Bold.ttf);
+}
+@font-face {
+    font-family: Playfair;
+    src: url(../src/assets/fonts/PlayfairDisplay-Regular.ttf);
+}
+
+@import "tailwindcss";
+
+@theme{
+    --font-DMsans : DM-Sans,"sans-serif";
+    --font-DMsansBold : DM-Sans-Bold,"sans-serif";
+    --font-Playfair : Playfair,"sans-serif";
+}
+
+
+a {
+  text-decoration: none;
+}
