@@ -1,45 +1,95 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { FiPhone } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";
-import { FaInstagram } from "react-icons/fa6";
+import { FaInstagram, FaFacebookF, FaGithub } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
-import { FaFacebookF } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
+import NavBar from "./NavBar";
 
 function Header() {
+  const [showTopbar, setShowTopbar] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const mobile = window.innerWidth < 1024;
+      setIsMobile(mobile);
+
+      if (mobile) {
+        setShowTopbar(false);
+        return;
+      }
+
+      // kalau scroll lebih dari tinggi topbar (misal 40px), hilang
+      setShowTopbar(window.scrollY < 40);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll);
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="bg-[#474747] flex p-2 justify-between" >
+    <header className="w-full fixed top-0 left-0 z-50">
+      <motion.div
+        className="bg-white shadow-md"
+        animate={{
+          boxShadow: showTopbar
+            ? "0px 2px 6px rgba(0,0,0,0.1)"
+            : "0px 3px 10px rgba(0,0,0,0.15)",
+        }}
+        transition={{ duration: 0.3 }}
+      >
+        {/* Topbar (desktop only) */}
+        {!isMobile && (
+          <motion.div
+            animate={{
+              height: showTopbar ? "auto" : 0,
+              opacity: showTopbar ? 1 : 0,
+            }}
+            transition={{ duration: 0.35, ease: "easeInOut" }}
+            className="overflow-hidden bg-[#474747] text-white font-DMsans"
+          >
+            <div className="flex justify-between items-center px-10 py-2">
+              {/* Kontak */}
+              <div className="flex items-center gap-6">
+                <div className="flex items-center gap-1">
+                  <FiPhone className="text-lg" />
+                  <span>08123456789</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <HiOutlineMail className="text-lg" />
+                  <span>apakek@gmail.com</span>
+                </div>
+              </div>
 
-      <div className='flex ml-40 ml font-DMsans  text-white '>
-        <FiPhone className=' size-4 m-1 ' />
-        <span className='ml-1'>08123456789</span>
-        <HiOutlineMail className='size-4 mt-1 ml-6' />
-        <span className='ml-2'>apakek@gmail.com</span>
-      </div>
+              {/* Sosial Media */}
+              <div className="flex gap-3">
+                {[FaInstagram, RiTwitterXLine, FaFacebookF, FaGithub].map(
+                  (Icon, i) => (
+                    <div
+                      key={i}
+                      className="h-6 w-6 rounded-full bg-[#838282] flex items-center justify-center"
+                    >
+                      <Icon className="text-white text-sm" />
+                    </div>
+                  )
+                )}
+              </div>
+            </div>
+          </motion.div>
+        )}
 
-      <div className='flex'>
-        <div className='flex gap-2 mr-25'>
-          <div className='h-6 w-6 rounded-full bg-[#838282]'>
-            <FaInstagram className='text-white mt-1 ml-1' />
-          </div>
-          <div className='h-6 w-6 rounded-full bg-[#838282]'>
-            <RiTwitterXLine className='text-white mt-1 ml-1' />
-          </div>
-          <div className='h-6 w-6 rounded-full bg-[#838282]'>
-            <FaFacebookF className='text-white mt-1 ml-1' />
-          </div>
-          <div className='h-6 w-6 rounded-full bg-[#838282]'>
-            <FaGithub className='text-white mt-1 ml-1' />
-          </div>
-
-
-        </div>
-
-      </div>
-
-
-    </div>
-  )
+        {/* Navbar tetap di bawah topbar */}
+        <NavBar />
+      </motion.div>
+    </header>
+  );
 }
 
-export default Header
+export default Header;

@@ -1,60 +1,52 @@
 import React from "react";
 import Button from "../../../shared/components/Button";
-import Card from "../../../shared/components/Card";
 import HeroImage from "../assets/images/HeroImage.png";
 
 function Hero() {
   return (
-    <div
-      className="w-full h-[1384px] bg-cover bg-center relative flex flex-col items-center"
-      style={{ backgroundImage: `url(${HeroImage})` }}
+    <section
+      className="relative w-full flex flex-col items-center justify-center 
+             bg-cover bg-center bg-no-repeat 
+             mt-[60px] lg:mt-[80px] 
+             h-[50vh] md:h-[min(150vh,1235px)] overflow-hidden"
+      style={{
+        backgroundImage: `url(${HeroImage})`,
+      }}
     >
-      {/* Radial gradient overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.9)_0%,rgba(255,255,255,0)_70%)]" />
+      {/* === Hero Content Wrapper === */}
+      <div className="relative z-10 max-w-[965px] mx-4 md:mx-80 text-center flex flex-col items-center justify-center transform -translate-y-[0px] md:-translate-y-[70px]">
 
-      {/* Hero text */}
-      <h1 className="pt-[300px] relative z-[1] text-[#2C2F24] text-8xl font-normal font-Playfair text-center">
-        <div>Makanan Lebih</div>
-        <div>Bermakna, Kurangi</div>
-        <div>Sisa, Bantu Sesama</div>
-      </h1>
+        {/* === Radial Glow Overlay (Fokus ke Hero Content) === */}
+        <div
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
+          w-[400px] h-[400px] md:w-[750px] md:h-[750px]
+          rounded-full pointer-events-none
+          bg-[radial-gradient(circle,rgba(255,255,255,0.9)_30%,rgba(255,255,255,0.4)_80%,rgba(255,255,255,0)_100%)]
+          blur-[50px] opacity-90"
+        />
 
-      {/* Subtext */}
-      <div className="text-center relative z-[1] mt-4">
-        <p className="font-DMsans text-[20px]">
-          Menghubungkan makanan berlebih dengan yang membutuhkan. Hemat,
-          sehat, dan berdaya bersama.
+        {/* === Hero Content === */}
+        <h2 className="relative text-[#2C2F24] font-Playfair leading-none text-3xl md:text-8xl px-2.5">
+          More Meaningful Meals, Less Waste, Help Others
+        </h2>
+
+        <p className="relative mt-3 text-[#2C2F24] font-DMsans text-[12px] md:text-[20px] max-w-[537px] mx-auto">
+          Connecting surplus food with those in need.
+          <br />
+          Save money, stay healthy, and empower together.
         </p>
+
+        <div className="relative mt-3 flex flex-col sm:flex-row justify-center gap-3 font-DMsans w-full px-10">
+          <Button className="w-full sm:w-auto py-1.5 md:py-4 md:px-6 font-bold text-[16px] text-[#7A2E11] border-2 border-[#7A2E11] transition hover:bg-[#7A2E11] hover:text-white whitespace-nowrap">
+            Donate Now
+          </Button>
+          <Button className="w-full sm:w-auto py-1.5 md:py-4 md:px-6 font-bold text-[16px] text-[#2C2F24] border-2 border-[#2C2F24] transition hover:bg-[#2C2F24] hover:text-white whitespace-nowrap">
+            Contact Us
+          </Button>
+        </div>
+
       </div>
-
-      {/* Buttons */}
-      <div className="mt-13 relative z-[1] flex justify-center gap-3">
-        <Button className="px-[32px] py-[20px] whitespace-nowrap font-DMsansBold text-[16px] text-[#7A2E11] border-2 transition hover:bg-[#7A2E11] hover:text-white">
-          Donate Now
-        </Button>
-        <Button className="px-[32px] py-[20px] whitespace-nowrap font-DMsansBold text-[16px] text-[#2C2F24] border-2 transition hover:bg-[#2C2F24] hover:text-white">
-          Contact Us
-        </Button>
-      </div>
-
-      {/* Stats cards */}
-      <div className="mt-[400px] flex justify-center gap-[24px] font-DMsans text-[#2C2F24] relative z-[1]">
-        <Card className="bg-white justify-center text-center w-[362px] h-[362px]">
-          <h1 className="text-[96px] font-bold">200</h1>
-          <p className="text-[24px]">Donasi Makanan</p>
-        </Card>
-
-        <Card className="bg-white justify-center text-center w-[362px] h-[362px]">
-          <h1 className="text-[96px] font-bold">123,456</h1>
-          <p className="text-[24px]">Orang Terdampak</p>
-        </Card>
-
-        <Card className="bg-white justify-center text-center w-[362px] h-[362px]">
-          <h1 className="text-[96px] font-bold">1,234</h1>
-          <p className="text-[24px]">Ton Makanan Terselamatkan</p>
-        </Card>
-      </div>
-    </div>
+    </section>
   );
 }
 
