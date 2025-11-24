@@ -3,9 +3,19 @@ import Button from "../../../shared/components/Button";
 import CardIMG from "../../../shared/components/CardIMG";
 import Anak from "../assets/images/Anak.png";
 import Berita2 from "../assets/images/Berita2.png";
+import { Link } from "react-router-dom"; // 1. Jangan lupa import ini
 
 function Berita() {
   const [showAll, setShowAll] = useState(false);
+
+  // Handler Teleport
+  const handleScrollTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    });
+  };
 
   const news = [
     {
@@ -50,9 +60,14 @@ function Berita() {
           <h1 className="font-Playfair text-[28px] md:text-[48px] font-medium">
             News
           </h1>
-          <Button className="hidden md:block px-[28px] py-[14px] whitespace-nowrap font-DMsansBold text-[15px] bg-[#7A2E11] text-[#fff] border-2 transition hover:bg-transparent hover:text-[#7A2E11] hover:border-[#7A2E11]">
-            Read All News
-          </Button>
+
+          {/* === BUTTON READ ALL NEWS === */}
+          <Link to="/news" onClick={handleScrollTop}>
+            <Button className="hidden md:block px-[28px] py-[14px] whitespace-nowrap font-DMsansBold text-[15px] bg-[#7A2E11] text-[#fff] border-2 transition hover:bg-transparent hover:text-[#7A2E11] hover:border-[#7A2E11]">
+              Read All News
+            </Button>
+          </Link>
+
         </div>
 
         {/* === DESKTOP GRID VIEW === */}

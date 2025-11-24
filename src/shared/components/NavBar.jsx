@@ -9,6 +9,13 @@ import SvgBurger from "./SvgBurger";
 export default function NavBar({ isSticky }) {
   const [isOpen, setIsOpen] = useState(false);
   const isShrink = isSticky && !isOpen;
+  const handleScrollTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant", // Langsung pindah (teleport)
+    });
+  };
 
   return (
     <nav
@@ -46,16 +53,24 @@ export default function NavBar({ isSticky }) {
           <NavItem to="/">Home</NavItem>
           <NavItem to="/about">About</NavItem>
           <NavItem to="/beneficiaries">Beneficiaries</NavItem>
-          <NavItem to="/pages">Pages</NavItem>
+          <NavItem to="/news">News</NavItem>
           <NavItem to="/contact">Contact</NavItem>
         </div>
 
         {/* Kanan: Button */}
-        <div className="hidden lg:flex flex-shrink-0">
+        {/* <div className="hidden lg:flex flex-shrink-0">
           <Button className="px-6 py-2 whitespace-nowrap border-2 hover:bg-[#DBDFD0] transition font-DMsans font-bold">
             Get Involved
           </Button>
-        </div>
+        </div> */}
+
+        <Link to="/SignUp" onClick={handleScrollTop}>
+          <div className="hidden lg:flex flex-shrink-0">
+            <Button className="px-6 py-2 whitespace-nowrap border-2 hover:bg-[#DBDFD0] transition font-DMsans font-bold">
+              Get Involved
+            </Button>
+          </div>
+        </Link>
 
         {/* Burger Menu (mobile & tablet) */}
         <div className="lg:hidden z-50">
@@ -83,11 +98,15 @@ export default function NavBar({ isSticky }) {
           <NavItem to="/" className="text-white">Home</NavItem>
           <NavItem to="/about" className="text-white">About</NavItem>
           <NavItem to="/beneficiaries" className="text-white">Beneficiaries</NavItem>
-          <NavItem to="/pages" className="text-white">Pages</NavItem>
+          <NavItem to="/news" className="text-white">News</NavItem>
           <NavItem to="/contact" className="text-white">Contact</NavItem>
-          <Button className="px-[24px] py-[12px] whitespace-nowrap border-[1.5px] hover:bg-[#DBDFD0] transition text-white">
-            Get Involved
-          </Button>
+          <Link to="/SignUp">
+            <Button className="px-[24px] py-[12px] whitespace-nowrap border-[1.5px] hover:bg-[#DBDFD0] transition text-white">
+              Get Involved
+            </Button>
+          </Link>
+
+
         </div>
       </motion.div>
     </nav>

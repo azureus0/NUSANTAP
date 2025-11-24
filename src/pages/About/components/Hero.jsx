@@ -92,8 +92,8 @@ function Hero() {
         </div>
 
         {/* Text Content */}
-        <div className="w-[557px] flex flex-col gap-2 items-start justify-center">
-          <h2 className="text-[55px] font-medium">
+        <div className="w-[557px] flex flex-col gap-2 items-start justify-center ">
+          <h2 className="text-[55px] font-medium font-Playfair">
             We provide healthy food for all.
           </h2>
           <p className=" text-[18px] font-medium">

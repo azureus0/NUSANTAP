@@ -60,7 +60,7 @@ function Testimoni() {
                                         {/* Text Mobile - full center */}
                                         <div className="absolute inset-0 flex flex-col justify-start items-center px-10 py-14 z-20 md:hidden">
                                             <div className="text-left">
-                                                <h2 className="text-3xl text-white font-bold pb-6">what they say</h2>
+                                                <h2 className="text-3xl text-white font-bold pb-6 font-Playfair">what they say</h2>
                                                 <blockquote className="text-sm text-white font-bold">
                                                     "{item.quote}"
                                                 </blockquote>
@@ -71,7 +71,7 @@ function Testimoni() {
                                         {/* Text Desktop - kanan bawah */}
                                         <div className="absolute bottom-0 right-0 w-1/2 h-1/2 p-4 z-20 hidden md:block">
                                             <div className="text-left">
-                                                <h2 className="text-4xl text-white font-medium">what they say</h2>
+                                                <h2 className="text-4xl text-white font-medium font-Playfair">what they say</h2>
                                                 <blockquote className="text-sm text-white font-bold">
                                                     "{item.quote}"
                                                 </blockquote>

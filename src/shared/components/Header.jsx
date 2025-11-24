@@ -59,11 +59,11 @@ function Header() {
               <div className="flex items-center gap-6">
                 <div className="flex items-center gap-1">
                   <FiPhone className="text-lg" />
-                  <span>08123456789</span>
+                  <span>083129041912</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <HiOutlineMail className="text-lg" />
-                  <span>apakek@gmail.com</span>
+                  <span>nusantap@gmail.com</span>
                 </div>
               </div>
 

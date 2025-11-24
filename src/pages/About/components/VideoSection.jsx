@@ -3,7 +3,7 @@ import IconMenu from "../assets/icons/IconMenu.svg";
 import IconWeb from "../assets/icons/IconWeb.svg";
 import IconTime from "../assets/icons/IconTime.svg"
 
-const DEFAULT_VIDEO_URL = "https://youtu.be/n6B5gQXlB-0";
+const DEFAULT_VIDEO_URL = "https://youtu.be/3yP-AsynmII";
 const DEFAULT_TITLE = "Watch our step on YouTube";
 
 // Video dari URL YouTube
@@ -47,7 +47,7 @@ const VideoSection = ({ videoUrl = DEFAULT_VIDEO_URL, title = DEFAULT_TITLE, ove
             </div>
 
             {/* Title */}
-            <h2 className="relative z-10 text-xl sm:text-4xl text-center whitespace-pre-line text-white">
+            <h2 className="relative z-10 text-xl sm:text-4xl text-center whitespace-pre-line text-white font-Playfair">
               {title}
             </h2>
           </div>

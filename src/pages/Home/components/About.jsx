@@ -4,8 +4,18 @@ import { FiPhone } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import Button from "../../../shared/components/Button";
+import { Link } from "react-router-dom";
 
 function About() {
+  // === Handler Function: Teleport ke atas ===
+  const handleScrollTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant", // Langsung pindah (teleport)
+    });
+  };
+
   return (
     <section className="bg-[#F9F9F7] p-4 md:p-0 flex justify-center">
 
@@ -73,9 +83,17 @@ function About() {
           <p className="font-DMsans font-regular">
             To reduce food waste while fostering social care. With Nusantap, sharing becomes easier, more impactful, and truly meaningful.
           </p>
-          <Button className="w-auto mt-6 px-[32px] py-[20px] whitespace-nowrap font-DMsansBold text-[16px] text-[#2C2F24] border-2 transition hover:bg-[#2C2F24] hover:text-white">
-            More About Us
-          </Button>
+
+          {/* === Link Updated === */}
+          <Link
+            to="/beneficiaries"
+            onClick={handleScrollTop}
+          >
+            <Button className="w-auto mt-6 px-8 py-3 whitespace-nowrap font-DMsansBold text-[16px] text-[#2C2F24] border-2 transition hover:bg-[#2C2F24] hover:text-white">
+              More About Us
+            </Button>
+          </Link>
+
         </div>
       </div>
     </section>

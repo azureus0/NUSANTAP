@@ -1,9 +1,9 @@
 import React from 'react';
 import LogoNusantap from '../../assets/logo/LogoNusantapFullPutih.png';
-import Anime1 from '../../assets/images/Anime1.png';
-import Anime2 from '../../assets/images/Anime2.png';
-import Anime3 from '../../assets/images/Anime3.png';
-import Anime4 from '../../assets/images/Anime4.png';
+import footer1 from '../../assets/images/footer-1.jpg';
+import footer2 from '../../assets/images/footer-2.jpg';
+import footer3 from '../../assets/images/footer-3.jpg';
+import footer4 from '../../assets/images/footer-4.jpg';
 import { FaInstagram } from "react-icons/fa6";
 import { RiTwitterXLine } from "react-icons/ri";
 import { FaFacebookF, FaGithub } from "react-icons/fa";
@@ -19,7 +19,7 @@ export default function Footer() {
   const pages = ['Sign In', 'Home', 'About', 'Beneficiaries', 'Contact Us', 'Report', 'News'];
   const utilityPages = ['A Blessing  to Share', 'Nusantap Kitchen', 'Nusantap Farm', 'Lunch Sharing', 'Emergency Food Relief'];
 
-  let instagramImages = [Anime1, Anime3, Anime4, Anime2];
+  let instagramImages = [footer1, footer3, footer4, footer2];
   if (instagramImages.length < 4) {
     while (instagramImages.length < 4) instagramImages.push(null);
   }

@@ -57,7 +57,7 @@ function Articles() {
     return (
         <section className="mt-[70px] md:mt-[110px] px-4 md:px-8 md:py-20">
             <div className="max-w-[1200px] mx-auto">
-                <h1 className="text-3xl md:text-5xl lg:text-6xl text-center mb-6 font-semibold md:font-normal">
+                <h1 className="text-3xl md:text-5xl lg:text-6xl text-center mb-6 font-semibold md:font-normal font-Playfair">
                     Our Blog & Articles
                 </h1>
                 <p className="text-center text-[#667085] max-w-[650px] mx-auto mb-10">
