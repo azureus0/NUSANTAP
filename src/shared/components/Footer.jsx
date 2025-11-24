@@ -25,7 +25,7 @@ export default function Footer() {
   }
 
   return (
-    <div className="bg-[#474747] text-white py-10 px-5 md:px-10 lg:px-20">
+    <div className="bg-[#474747] text-white py-10 px-5 md:px-10 lg:px-20 font-DMsans">
       <div className="max-w-[1350px] mx-auto flex flex-col md:flex-row md:justify-between gap-10 lg:gap-20">
 
         {/* Left Section */}
@@ -57,14 +57,14 @@ export default function Footer() {
         {/* Middle Sections (Desktop only) */}
         <div className="hidden md:flex flex-row justify-between flex-[0.4] md:max-w-[360px]">
           <div className="flex flex-col gap-4">
-            <h6 className="text-white font-bold text-[16px]">Pages</h6>
-            <div className="flex flex-col gap-2 text-[#DBDFD0]">
+            <h6 className="text-white font-DMsans font-bold">Pages</h6>
+            <div className="flex flex-col gap-4 text-[#DBDFD0]">
               {pages.map((page, idx) => <span key={idx}>{page}</span>)}
             </div>
           </div>
           <div className="flex flex-col gap-4">
-            <h6 className="text-white font-bold text-[16px]">Utility Pages</h6>
-            <div className="flex flex-col gap-2 text-[#DBDFD0]">
+            <h6 className="text-white font-DMsans font-bold">Utility Pages</h6>
+            <div className="flex flex-col gap-4 text-[#DBDFD0]">
               {utilityPages.map((page, idx) => <span key={idx}>{page}</span>)}
             </div>
           </div>
@@ -72,7 +72,7 @@ export default function Footer() {
 
         {/* Instagram Images */}
         <div className="flex flex-col gap-4 flex-1 md:flex-[0.3] md:max-w-[360px]">
-          <h6 className="text-white font-bold text-[16px]">Follow Us On Instagram</h6>
+          <h6 className="text-white font-bold font-DMsans">Follow Us On Instagram</h6>
           <div className="grid grid-cols-2 gap-3">
             {instagramImages.map((img, idx) => (
               <div
@@ -91,8 +91,11 @@ export default function Footer() {
         </div>
       </div>
 
+      {/* Bottom separator (mobile only) */}
+      <div className="border-t border-[#ADB29E] my-6 md:hidden w-2/3 mx-auto" />
+
       {/* Bottom Copyright */}
-      <div className="text-[#ADB29E] text-center mt-10 text-sm md:text-base">
+      <div className="text-[#ADB29E] text-left md:text-center text-sm md:text-base md:p-12">
         Copyright © 2025 Hashtag Developer. All Rights Reserved
       </div>
     </div>

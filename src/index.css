@@ -1,62 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import "tailwindcss/preflight";
 @tailwind utilities;
-
-/* ===========================
-   DM Sans Variable Font
-   =========================== */
-@font-face {
-  font-family: "DM Sans";
-  src: url("../src/assets/fonts/DMSans-VariableFont_opsz,wght.woff2")
-    format("woff2-variations");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-  font-variation-settings: "wght" 400, "opsz" 36;
-  font-optical-sizing: auto;
-}
-
-@font-face {
-  font-family: "DM Sans";
-  src: url("../src/assets/fonts/DMSans-Italic-VariableFont_opsz,wght.woff2")
-    format("woff2-variations");
-  font-weight: 100 900;
-  font-style: italic;
-  font-display: swap;
-  font-variation-settings: "wght" 400, "opsz" 36;
-  font-optical-sizing: auto;
-}
-
-/* ===========================
-   Playfair Display Variable Font
-   =========================== */
-@font-face {
-  font-family: "Playfair Display";
-  src: url("../src/assets/fonts/PlayfairDisplay-VariableFont_wght.woff2")
-    format("woff2-variations");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-  /* Set default Medium (500) biar sama persis kayak di Figma */
-  font-variation-settings: "wght" 500, "opsz" 36;
-  font-optical-sizing: auto;
-}
-
-@font-face {
-  font-family: "Playfair Display";
-  src: url("../src/assets/fonts/PlayfairDisplay-Italic-VariableFont_wght.woff2")
-    format("woff2-variations");
-  font-weight: 100 900;
-  font-style: italic;
-  font-display: swap;
-  font-variation-settings: "wght" 500, "opsz" 36;
-  font-optical-sizing: auto;
-}
-
 @import "tailwindcss";
 
-@theme {
-  --font-DMsans: "DM Sans", sans-serif;
-  --font-Playfair: "Playfair Display", serif;
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+@theme{
+    --font-DMsans : "DM Sans", sans-serif;
+    --font-Playfair : "Playfair Display", serif;
 }
 
 a {
@@ -66,15 +23,16 @@ a {
 /* ===========================
    Swiper Pagination Custom Style
    =========================== */
-.swiper-pagination {
-  position: relative !important; /* biar gak nempel ke slide */
-  margin-top: 70px !important;   /* jarak dari card ke dot */
+
+   /* .swiper-pagination {
+  position: relative !important; 
+  margin-top: 70px !important;  
   display: flex !important;
   justify-content: center !important;
 }
 
 .swiper-pagination-bullet {
-  background-color: #ed5700 !important; /* warna dot normal */
+  background-color: #ed5700 !important; 
   opacity: 0.3;
   transition: all 0.3s ease;
   width: 8px;
@@ -84,7 +42,6 @@ a {
 
 .swiper-pagination-bullet-active {
   opacity: 1;
-  background-color: #ed5700 !important; /* warna dot aktif */
+  background-color: #ed5700 !important; 
   transform: scale(1.3);
-}
-
+} */

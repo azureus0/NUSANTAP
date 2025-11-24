@@ -30,8 +30,8 @@ function About() {
           </div>
 
           {/* === Contact Section === */}
-          <div className="bg-[#474747] text-white p-6 mt-2 mb-6 flex flex-col gap-4 rounded-xl w-full">
-            <h2 className="text-xl font-bold">Come and connect with us</h2>
+          <div className="bg-[#474747] text-white  p-6 mt-2 mb-6 flex flex-col gap-4 rounded-xl w-full">
+            <h2 className="text-xl font-DMsans">Come and connect with us</h2>
             <div className="flex flex-col gap-3">
               <div className="flex gap-2 items-center"><FiPhone /> 08124356789</div>
               <div className="flex gap-2 items-center"><HiOutlineMail /> Apakek@gmail.com</div>
@@ -54,7 +54,7 @@ function About() {
           />
 
           {/* Overlay Card */}
-          <div className="absolute -bottom-[6%] -right-[6%] w-[70%] aspect-[411/321] bg-[#474747] p-5 flex flex-col gap-4 text-white rounded-xl">
+          <div className="absolute -bottom-[6%] -right-[6%] w-[70%] aspect-[411/321] bg-[#474747] p-5 flex flex-col gap-4 text-white rounded-xl font-DMsans">
             <h1 className="text-[24px] font-bold">Come and connect with us</h1>
             <div className="flex flex-col gap-[25px]">
               <div className="flex gap-[20px] items-center"><FiPhone /> 08124356789</div>

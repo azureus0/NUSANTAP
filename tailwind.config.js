@@ -8,6 +8,7 @@ export default {
       },
       fontFamily: {
         DMsans: ["DM Sans", "sans-serif"],
+        Playfair: ["Playfair Display", "serif"],
       },
     },
   },

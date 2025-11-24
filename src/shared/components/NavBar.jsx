@@ -13,7 +13,7 @@ export default function NavBar({ isSticky }) {
   return (
     <nav
       className={`w-full transition-all duration-300 ease-in-out z-50 
-        ${isShrink ? "fixed top-0 left-0 shadow-md bg-[#F9F9F7]" : "relative bg-[#F9F9F7]"}`}
+        ${isShrink ? "fixed top-0 left-0 bg-[#F9F9F7]" : "relative bg-[#F9F9F7]"}`}
     >
       <div
         className={`relative flex items-center justify-between w-full
@@ -30,7 +30,7 @@ export default function NavBar({ isSticky }) {
             <img
               src={LogoNusantap}
               alt="LogoNusantap"
-              className="h-[26px] object-contain cursor-pointer lg:hidden"
+              className="h-[22px] object-contain cursor-pointer lg:hidden"
             />
             {/* Logo besar (desktop) */}
             <img

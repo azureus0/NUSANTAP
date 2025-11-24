@@ -37,11 +37,10 @@ function Header() {
   return (
     <header className="w-full fixed top-0 left-0 z-50">
       <motion.div
-        className="bg-white shadow-md"
+        className="bg-white"
         animate={{
-          boxShadow: showTopbar
-            ? "0px 2px 6px rgba(0,0,0,0.1)"
-            : "0px 3px 10px rgba(0,0,0,0.15)",
+          // klo ga mau shadow di header, ganti ke -> boxShadow: "none",
+          boxShadow: "none",
         }}
         transition={{ duration: 0.3 }}
       >

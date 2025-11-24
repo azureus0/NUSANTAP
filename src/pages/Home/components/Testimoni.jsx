@@ -3,11 +3,11 @@ import Card from "../../../shared/components/Card";
 import image from "../../../assets/images/Image.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
-
+import "./Testimoni.css";
 import "swiper/css";
 import "swiper/css/pagination";
 
-function Services() {
+function Testimoni() {
   const testimonials = [
     {
       title: "Meals That Matter",
@@ -89,7 +89,7 @@ function Services() {
             delay: 5000,
             disableOnInteraction: false,
           }}
-          className="mt-10 w-full max-w-[1500px] px-[140px] pb-12"
+          className="my-slider-home mt-10 w-full max-w-[1500px] px-[140px] pb-12"
           breakpoints={{
             768: { slidesPerView: "auto", centeredSlides: true },
           }}
@@ -166,4 +166,4 @@ function Services() {
   );
 }
 
-export default Services;
+export default Testimoni;
