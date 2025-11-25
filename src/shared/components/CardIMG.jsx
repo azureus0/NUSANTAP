@@ -1,16 +1,16 @@
 import React from 'react'
 
-function CardIMG({ 
-  src, 
-  alt, 
+function CardIMG({
+  src,
+  alt,
   tanggal,
-  title, 
-  text, 
-  className, 
+  title,
+  text,
+  className,
   imgClassName,
-  tanggalClassName, 
+  tanggalClassName,
   titleClassName,
-  textClassName 
+  textClassName
 }) {
   return (
     <div className={`bg-white font-DMsans rounded-[12px] overflow-hidden shadow-md ${className}`}>

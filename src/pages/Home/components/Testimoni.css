@@ -1,0 +1,16 @@
+.my-slider-home .swiper-pagination-bullet {
+  background-color: #ccc;
+  opacity: 0.5;
+}
+
+.my-slider-home .swiper-pagination-bullet-active {
+  background-color: #7A2E11;
+  opacity: 1;
+}
+
+/* pagination tetap di bawah container karena kita kasih padding-bottom di wrapper */
+.my-slider-home .swiper-pagination {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
